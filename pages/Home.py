@@ -38,11 +38,11 @@ elif st.session_state.section == "Dependencies":
     about_depend = """
     ## Dependencies Used in the Project
 
-    1. **﻿numpy== 1.26.2**
+    1. **numpy== 1.26.2**
     2. **pandas== 2.1.3**
     3. **plotly== 5.18.0**
-    4. **stats-can==2.5.3**
-    5. **streamlit==1.32.2**
+    4. **stats-can== 2.5.3**
+    5. **streamlit== 1.32.2**
 
     """
 
