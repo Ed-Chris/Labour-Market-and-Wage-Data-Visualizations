@@ -30,6 +30,7 @@ line_chart = px.line(
     filtered_df,
     x='Year',
     y='Gender Pay Gap (%)',
+    color_discrete_sequence=['#DAA520'],
     title='Gender Pay Gap Over Years'
 )
 
