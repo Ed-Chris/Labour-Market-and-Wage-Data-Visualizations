@@ -47,7 +47,6 @@ bar_chart = px.bar(
     x='Industry',
     y='Average Participation Rate (%)',
     color='Gender',
-    color_discrete_map={'Male Participation Rate (%)': '#0060F9', 'Female Participation Rate (%)': '#FD0ADF'},
     barmode='group',
     title=f'Average Participation Rates by Industry from {year_range[0]} to {year_range[1]}',
     labels={'Average Participation Rate (%)': 'Average Participation Rate (%)'}
@@ -62,7 +61,7 @@ bar_chart.update_layout(
         xanchor="left",
         x=0.5
     ),
-    width=1000,  # Set the width of the chart
+    width=800,  # Set the width of the chart
     height=600,  # Set the height of the chart
     xaxis=dict(tickangle=45),  # Tilt x-axis labels
     title={
