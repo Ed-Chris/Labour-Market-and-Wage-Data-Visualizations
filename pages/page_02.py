@@ -43,9 +43,9 @@ fig.update_layout(
         xanchor="left",
         x=0.6
     ),
-    width=1200,  # Set the width of the chart
+    width=1000,  # Set the width of the chart
     height=600,  # Set the height of the chart
-    xaxis=dict(tickangle=40)  # Tilt x-axis labels
+    xaxis=dict(tickangle=45)  # Tilt x-axis labels
 )
 
 st.plotly_chart(fig, use_container_width=True)  # Adjust width to fit container
