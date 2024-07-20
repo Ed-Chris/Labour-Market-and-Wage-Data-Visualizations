@@ -47,6 +47,7 @@ bar_chart = px.bar(
     x='Industry',
     y='Average Participation Rate (%)',
     color='Gender',
+    color_discrete_map={'Male Participation Rate (%)': '#0060F9', 'Female Participation Rate (%)': '#FD0ADF'},
     barmode='group',
     title=f'Average Participation Rates by Industry from {year_range[0]} to {year_range[1]}',
     labels={'Average Participation Rate (%)': 'Average Participation Rate (%)'}
