@@ -33,6 +33,7 @@ line_chart = px.line(
     x='Year',
     y='Value',
     color='Type of Wages',
+    color_discrete_sequence=['#DAA520'],
     title='Wages by Year'
 )
 
