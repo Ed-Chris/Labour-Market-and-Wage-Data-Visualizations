@@ -54,6 +54,8 @@ bar_chart.update_layout(
         xanchor="center",
         x=0.5
     ),
+    width=1000,  # Set the width of the chart
+    height=600,  # Set the height of the chart
     yaxis_title='Wage',
 )
 
