@@ -57,7 +57,7 @@ bar_chart.update_layout(
     yaxis_title='Wage',
 )
 
-st.plotly_chart(bar_chart)
+st.plotly_chart(bar_chart, use_container_width=True)
 
 # Provide download button for filtered data
 csv = avg_values_by_industry.to_csv(index=False)
