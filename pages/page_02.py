@@ -43,7 +43,7 @@ fig.update_layout(
         xanchor="left",
         x=0.6
     ),
-    width=1000,  # Set the width of the chart
+    width=1200,  # Set the width of the chart
     height=600,  # Set the height of the chart
     xaxis=dict(tickangle=45)  # Tilt x-axis labels
 )
