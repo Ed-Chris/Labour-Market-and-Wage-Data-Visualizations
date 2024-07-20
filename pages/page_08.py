@@ -42,7 +42,7 @@ bar_chart = px.bar(
     avg_values_by_industry,
     x='Industry',
     y='Value',
-    color_discrete_sequence=['#00F900'],
+    color_discrete_sequence=['#DAA520'],
     title=f'Average Values by Industry from {year_range[0]} to {year_range[1]}'
 )
 
