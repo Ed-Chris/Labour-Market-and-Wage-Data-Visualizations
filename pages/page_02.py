@@ -35,7 +35,7 @@ fig = px.bar(grouped_df, x='Industry', y='Value', color='Sex', barmode='group', 
 
 # Adjust chart size and legend position
 fig.update_layout(
-    yaxis_title='Characteristics (x1000)',
+    yaxis_title='Number of people (x1000)',
     legend=dict(
         orientation="h",
         yanchor="bottom",
