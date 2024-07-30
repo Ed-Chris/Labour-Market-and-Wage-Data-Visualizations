@@ -38,7 +38,7 @@ fig = px.bar(filtered_df, x='Year', y='Value', color='Industry', barmode='group'
              title=f'Characteristics Values by Year and Industry ({year_range[0]} to {year_range[1]})')
 
 # Set plotly chart size
-fig.update_layout(yaxis_title='Characteristics (x1000)',showlegend=False,height=400, width=800)  # Adjust height and width as needed
+fig.update_layout(yaxis_title='Number of people (x1000)',showlegend=False,height=400, width=800)  # Adjust height and width as needed
 
 # Display the chart in the main area
 st.plotly_chart(fig)
