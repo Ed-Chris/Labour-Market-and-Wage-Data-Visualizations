@@ -24,7 +24,7 @@ Upon opening the application, you'll see the main page with the title "Labour Ma
 - Filters: Each page includes filters to adjust parameters like year, industry, and age group, allowing for customized data views.
 
 ## Visualization Pages
-The application contains 10 pages, each dedicated to a specific aspect of the labour market and wage data. Here are some examples:
+The application contains 10 pages, each dedicated to a specific aspect of the labour market and wage data.
 
 Employment Trends: View how employment levels have changed over the years in various industries.
 Full-time vs Part-time Employment: Compare full-time and part-time employment trends.
