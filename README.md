@@ -1,5 +1,7 @@
 # Labour Market and Wage Characteristics Data Visualizations
 
+- [Visit the Application](https://labour-market-and-wage-data-visualizations-gbkzvysesfg86lm3xkw.streamlit.app/)
+
 ## Overview
 
 This web application provides interactive visualizations of labour market and wage data in Canada. It helps users explore employment trends, participation rates, and wage disparities between genders over time. The data is sourced from Statistics Canada.
