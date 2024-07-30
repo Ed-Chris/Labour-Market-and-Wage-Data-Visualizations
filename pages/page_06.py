@@ -62,7 +62,7 @@ bar_chart.update_layout(
         'text': f'Average Difference in Participation Rates by Industry from {year_range[0]} to {year_range[1]}'
     },
     xaxis_title='Industry',
-    yaxis_title='Average Difference (%)',
+    yaxis_title='Average Participation Rate Difference (%)',
     legend_title='Gender'
 )
 
