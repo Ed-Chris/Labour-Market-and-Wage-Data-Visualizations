@@ -26,34 +26,34 @@ Upon opening the application, you'll see the main page with the title "Labour Ma
 ## Visualization Pages
 The application contains 10 pages, each dedicated to a specific aspect of the labour market and wage data.
 
-#### Yearly Labour Market Data:
+#### 1. Yearly Labour Market Data:
 "Visualize yearly labour market trends with interactive line charts and CSV download options."
 
-#### Industry-Based Labour Data:
+#### 2. Industry-Based Labour Data:
 "Analyze average labour market characteristics by industry over a selected year range, with CSV export capabilities."
 
-#### Labour Market Data by Year and Industry:
+#### 3. Labour Market Data by Year and Industry:
 "Examine labour market data by year and industry, with options to filter by characteristics and age groups, and download as CSV."
 
-#### Labour Market Participation Rate:
+#### 4. Labour Market Participation Rate:
 "Track changes in labour market participation rates over time, with downloadable CSV data."
 
-#### Average Participation Rates by Industry:
+#### 5. Average Participation Rates by Industry:
 "Explore average labour market participation rates by industry, with CSV download for detailed analysis."
 
-#### Average Difference in Participation Rates by Industry:
+#### 6. Average Difference in Participation Rates by Industry:
 "Visualize the average differences in labour market participation rates between genders by industry, with CSV export."
 
-#### Yearly Wages Data:
+#### 7. Yearly Wages Data:
 "Inspect yearly wage trends by characteristic and industry, with a CSV download feature for detailed analysis."
 
-#### Average Wages by Industry:
+#### 8. Average Wages by Industry:
 "Compare average wages by industry over a selected year range, with CSV export options for in-depth review."
 
-#### Gender Pay Gap Over Years:
+#### 9. Gender Pay Gap Over Years:
 "View trends in gender pay gaps over the years, with downloadable CSV data for detailed examination."
 
-#### Gender Pay Gap by Industry:
+#### 10. Gender Pay Gap by Industry:
 "Analyze average gender pay gaps by industry across selected years, with CSV download available for comprehensive insights."
 
 ## Data Sources
