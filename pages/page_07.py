@@ -45,7 +45,7 @@ line_chart.update_layout(
         xanchor="center",
         x=0.5
     ),
-    yaxis_title='Wage',
+    yaxis_title='Wage in CAD',
 )
 
 st.plotly_chart(line_chart)
