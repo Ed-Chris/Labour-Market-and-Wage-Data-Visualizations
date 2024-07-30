@@ -24,7 +24,7 @@ fig = px.line(filtered_df, x='Year', y='Value', color='Characteristics', title='
 
 # Update the layout to move the legend to the top of the chart
 fig.update_layout(
-    yaxis_title='Characteristics (x1000)',
+    yaxis_title='Number of people (x1000)',
     legend=dict(
         orientation="h",
         yanchor="bottom",
