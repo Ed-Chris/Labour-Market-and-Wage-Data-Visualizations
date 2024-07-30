@@ -57,7 +57,7 @@ bar_chart.update_layout(
     width=1200,  # Set the width of the chart
     height=600,  # Set the height of the chart
     xaxis=dict(tickangle=40),  # Tilt x-axis labels
-    yaxis_title='Wage',
+    yaxis_title='Wage in CAD',
 )
 
 st.plotly_chart(bar_chart, use_container_width=True)
