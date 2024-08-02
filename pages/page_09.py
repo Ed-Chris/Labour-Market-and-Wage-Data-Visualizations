@@ -93,4 +93,4 @@ st.plotly_chart(fig)
 
 # Provide download button for filtered and forecasted data
 combined_csv = combined_df.to_csv(index=False)
-st.download_button(label="Download Combined Data CSV", data=combined_csv, file_name='combined_gender_pay_gap_data.csv', mime='text/csv')
+st.download_button(label="Download Data CSV", data=combined_csv, file_name='combined_gender_pay_gap_data.csv', mime='text/csv')
