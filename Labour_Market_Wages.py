@@ -82,3 +82,59 @@ clean_data()
 # Main page content
 st.title("Labour Market and Wage Characteristics Data Visualizations")
 st.write("Select the pages for Visualizations. The filters for adjusting the parameters of the visualizations will appear on the sidebar.")
+st.write("More info about the Industries")
+
+import streamlit as st
+import plotly.graph_objs as go
+
+st.title("Hierarchy of Industries")
+
+labels = [
+    "Industries", 
+    "Goods-producing sector", "Services-producing sector", "Unclassified industries",
+    "Agriculture", "Forestry, fishing, mining, quarrying, oil and gas", "Utilities", "Construction", "Manufacturing",
+    "Wholesale and retail trade", "Transportation and warehousing", "Finance, insurance, real estate, rental and leasing", "Professional, scientific and technical services", 
+    "Business, building and other support services", "Educational services", "Health care and social assistance", "Information, culture and recreation", "Accommodation and food services",
+    "Other services (except public administration)", "Public administration",
+    "Forestry and logging and support activities for forestry", "Fishing, hunting and trapping", "Mining, quarrying, and oil and gas extraction",
+    "Durables", "Non-durables", 
+    "Wholesale trade", "Retail trade",
+    "Finance and insurance", "Real estate and rental and leasing"
+]
+
+parents = [
+    "", 
+    "Industries", "Industries", "Industries",
+    "Goods-producing sector", "Goods-producing sector", "Goods-producing sector", "Goods-producing sector", "Goods-producing sector",
+    "Services-producing sector", "Services-producing sector", "Services-producing sector", "Services-producing sector", 
+    "Services-producing sector", "Services-producing sector", "Services-producing sector", "Services-producing sector", "Services-producing sector",
+    "Services-producing sector", "Services-producing sector",
+    "Forestry, fishing, mining, quarrying, oil and gas", "Forestry, fishing, mining, quarrying, oil and gas", "Forestry, fishing, mining, quarrying, oil and gas",
+    "Manufacturing", "Manufacturing",
+    "Wholesale and retail trade", "Wholesale and retail trade",
+    "Finance, insurance, real estate, rental and leasing", "Finance, insurance, real estate, rental and leasing"
+]
+
+colors = [
+    "red", 
+    "#F9AF00", "#57F900", "#0069F9",    # Main Sectors
+    "#ffcccb", "#ffcccb", "#ffcccb", "#ffcccb", "#ffcccb",   # Subcategories under Goods-producing sector
+    "#FF7D00", "#A048B5", "#48B3B5", "#B5A448", "#ECF900",   # Subcategories under Services-producing sector
+    "#cceeff", "#cceeff", "#cceeff", "#cceeff", "#cceeff",
+    "#cceeff", "#cceeff",
+    "#ffb3b3", "#ffb3b3", "#ffb3b3",   # Subcategories under Unclassified industries
+    "#ffb3b3", "#ffb3b3",
+    "#cceeff", "#cceeff",    # Level 3 Services-producing
+    "#cceeff", "#cceeff"
+]
+
+fig = go.Figure(go.Treemap(
+    labels=labels,
+    parents=parents,
+    marker=dict(colors=colors),
+    root_color="red"
+))
+
+fig.update_layout(margin=dict(t=50, l=25, r=25, b=25))
+
+st.plotly_chart(fig)
