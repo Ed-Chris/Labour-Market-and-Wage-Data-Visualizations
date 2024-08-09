@@ -85,6 +85,7 @@ st.title("Labour Market and Wage Characteristics Data Visualizations")
 st.write("Select the pages for Visualizations. The filters for adjusting the parameters of the visualizations will appear on the sidebar.")
 
 st.title("Hierarchy of Industries")
+st.write("The below SunBurst chart shows how the industries are classified in different sectors")
 
 # Data for the chart
 labels = [
@@ -131,7 +132,6 @@ fig = go.Figure(go.Sunburst(
 
 # Update layout for better readability and larger size
 fig.update_layout(
-    title_text="Hierarchy of Industries",
     margin=dict(t=50, l=25, r=25, b=25),
     height=800,  # Adjust the height as needed
     width=800    # Adjust the width as needed
