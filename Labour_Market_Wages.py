@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from stats_can import StatsCan
+import plotly.graph_objs as go
    
 def clean_data():
     sc = StatsCan()
@@ -82,13 +83,10 @@ clean_data()
 # Main page content
 st.title("Labour Market and Wage Characteristics Data Visualizations")
 st.write("Select the pages for Visualizations. The filters for adjusting the parameters of the visualizations will appear on the sidebar.")
-st.write("More info about the Industries")
-
-import streamlit as st
-import plotly.graph_objs as go
 
 st.title("Hierarchy of Industries")
 
+# Data for the chart
 labels = [
     "Industries", 
     "Goods-producing sector", "Services-producing sector", "Unclassified industries",
@@ -115,26 +113,28 @@ parents = [
     "Finance, insurance, real estate, rental and leasing", "Finance, insurance, real estate, rental and leasing"
 ]
 
+# Define distinct colors for each label
 colors = [
-    "red", 
-    "#F9AF00", "#57F900", "#0069F9",    # Main Sectors
-    "#ffcccb", "#ffcccb", "#ffcccb", "#ffcccb", "#ffcccb",   # Subcategories under Goods-producing sector
-    "#FF7D00", "#A048B5", "#48B3B5", "#B5A448", "#ECF900",   # Subcategories under Services-producing sector
-    "#cceeff", "#cceeff", "#cceeff", "#cceeff", "#cceeff",
-    "#cceeff", "#cceeff",
-    "#ffb3b3", "#ffb3b3", "#ffb3b3",   # Subcategories under Unclassified industries
-    "#ffb3b3", "#ffb3b3",
-    "#cceeff", "#cceeff",    # Level 3 Services-producing
-    "#cceeff", "#cceeff"
+    '#0083F9', '#ff7f0e', '#2ca02c', '#d62728', '#FFD180', '#FFAB91', '#F8BBD0', '#FF8A65', '#FF9800',
+    '#98FF98', '#98FB98', '#90EE90', '#F0FFF0', '#00FA9A', '#32CD32', '#228B22', '#2E8B57', '#6B8E23',
+    '#556B2F', '#013220', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf', '#f7b6d2', '#7f7f7f',
+    '#c5b0d5', '#ff9896', '#c49c94', '#f7b6d2', '#c7c7c7', '#d62728', '#9467bd'
 ]
 
-fig = go.Figure(go.Treemap(
+# Create the Sunburst diagram
+fig = go.Figure(go.Sunburst(
     labels=labels,
     parents=parents,
-    marker=dict(colors=colors),
-    root_color="red"
+    branchvalues="total",
+    marker=dict(colors=colors)
 ))
 
-fig.update_layout(margin=dict(t=50, l=25, r=25, b=25))
+# Update layout for better readability and larger size
+fig.update_layout(
+    title_text="Hierarchy of Industries",
+    margin=dict(t=50, l=25, r=25, b=25),
+    height=800,  # Adjust the height as needed
+    width=800    # Adjust the width as needed
+)
 
 st.plotly_chart(fig)
