@@ -32,12 +32,13 @@ def clean_data():
 
     # Load and clean wage data
     df_wages = sc.table_to_df("14-10-0064-01")
-    df_clean_wages = df_wages[['REF_DATE', 'Wages', 'Type of work', 'North American Industry Classification System (NAICS)', 'Sex', 'Age group', 'VALUE']]
+    df_clean_wages = df_wages[['REF_DATE', 'Wages', 'Type of work', 'North American Industry Classification System (NAICS)', 'Gender', 'Age group', 'VALUE']]
     df_main_wages = df_clean_wages.rename(columns={
         'REF_DATE': 'Year',
         'Wages': 'Type of Wages',
         'Type of work': 'Characteristics',
         'North American Industry Classification System (NAICS)': 'Industry',
+        'Gender': 'Sex',
         'VALUE': 'Value'
     })
     df_main_wages['Year'] = df_main_wages['Year'].astype(str).str[:4]
