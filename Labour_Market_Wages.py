@@ -8,10 +8,10 @@ def clean_data():
 
     # Load and clean labour data
     df = sc.table_to_df("14-10-0023-01")
-    df_clean = df[['REF_DATE', 'Type of work', 'North American Industry Classification System (NAICS)', 'Gender', 'Age group', 'VALUE']]
+    df_clean = df[['REF_DATE', 'Labour force characteristics', 'North American Industry Classification System (NAICS)', 'Gender', 'Age group', 'VALUE']]
     df_main = df_clean.rename(columns={
         'REF_DATE': 'Year',
-        'Type of work': 'Characteristics',
+        'Labour force characteristics': 'Characteristics',
         'North American Industry Classification System (NAICS)': 'Industry',
         'Gender': 'Sex',
         'VALUE': 'Value'
