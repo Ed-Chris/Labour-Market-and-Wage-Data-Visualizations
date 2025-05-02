@@ -24,8 +24,8 @@ def clean_data():
     selected_characteristics = ['Employment', 'Full-time employment', 'Part-time employment']
     employment_data = df_yearly[df_yearly['Characteristics'].isin(selected_characteristics)]
     pivot_table = employment_data.pivot_table(index=['Year', 'Industry', 'Age group', 'Characteristics'], columns='Sex', values='Value')
-   pivot_table['Male Participation Rate (%)'] = (pivot_table['Men+'] / pivot_table['Total - Gender']) * 100
-   pivot_table['Female Participation Rate (%)'] = (pivot_table['Women+'] / pivot_table['Total - Gender']) * 100
+    pivot_table['Male Participation Rate (%)'] = (pivot_table['Men+'] / pivot_table['Total - Gender']) * 100
+    pivot_table['Female Participation Rate (%)'] = (pivot_table['Women+'] / pivot_table['Total - Gender']) * 100
     pivot_table.reset_index(inplace=True)
     processed_data = pivot_table[['Year', 'Industry', 'Age group', 'Characteristics', 'Male Participation Rate (%)', 'Female Participation Rate (%)']]
     processed_data['Difference (%)'] = processed_data['Male Participation Rate (%)'] - processed_data['Female Participation Rate (%)']
